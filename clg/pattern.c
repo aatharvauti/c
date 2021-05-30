@@ -69,11 +69,31 @@ int main()
 
    printf("\n\n");
 
+// AAAA BBB Inverted Half Pyramid
+
+   for (i = 0; i <= rows; ++i)
+   {
+      for(j = rows; j >= i; j--)
+      {
+         printf("%c", i + 65);
+      }
+      printf("\n");
+   }
+
+   printf("\n\n");
 
 
+// ABCD Inverted Half Pyramid
 
 
-
+   for (i = 3; i >= 0; i--)
+   {
+      for(j = 0; j <= i; j++)
+      {
+         printf("%c", j + 65);
+      }
+      printf("\n");
+   }
 
 
 }
