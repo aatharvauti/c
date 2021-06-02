@@ -47,7 +47,7 @@ int main ()
         printf("The 12th month is December\n");
         break;
     default:
-        printf("Error: Number can't be negative, zero or greater than 13!\n");
+        printf("Error: Number can't be negative, zero or greater than 12!\n");
         break;
     }
 }
