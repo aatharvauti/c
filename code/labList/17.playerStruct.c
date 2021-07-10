@@ -4,42 +4,44 @@
 struct Player {
 	char playerName[100];
 	char teamName[100];
-	float battingAvg;
-} player[2], a; 
+	float battingAvg[100];
+} player[1000], a; 
 
 int main()
 {
-	int i, j;
+	int i, j, f, p;
 
-	struct Player Rohit;
-	struct Player Virat;
-	struct Player Rahul;
+	printf("Enter the number of Players: ");
+	scanf("%d", &f);
 
-	struct Player player[2];
+	for (i = 0, p = 1; i < f, p <= f; i++, p++)
+	{
+		printf("\nPlayer %d", p);
+	
+		printf("\nEnter Name: ");
+		scanf("%s ", player[i].playerName);
 
-	strcpy(player[0].playerName, "Rohit Sharma");
-	strcpy(player[0].teamName, "India");
-	player[0].battingAvg = 46.2;
+		printf("Enter Team Name: ");
+		scanf("%s", player[i].teamName);
 
-	strcpy(player[1].playerName, "Virat Kohli");
-	strcpy(player[1].teamName, "India");
-	player[1].battingAvg = 50.0;
+		printf("Enter Batting Average: ");
+		scanf("%f", &player[i].battingAvg);
+	}
 
-	strcpy(player[2].playerName, "Rahul Dravid");
-	strcpy(player[2].teamName, "India");
-	player[2].battingAvg = 52.4;
-
-	for (i = 1; i < 3; i++)
- 	 for (j = 0; j < 3 - i; j++) {
-		if ((player[j].battingAvg, player[j + 1].battingAvg) > 0) 
+	for (i = 0; i < f; i++)
+	{
+ 	 	for (j = 0; j < f - 1; j++) 
 		{
-			a = player[j];
-			player[j] = player[j + 1];
-			player[j + 1] = a;
-		}
-  	}
+			if (player[j].battingAvg < player[j + 1].battingAvg) 
+			{
+				a = player[j];
+				player[j] = player[j + 1];
+				player[j + 1] = a;
+			}
+  		}
+	}
 
-	for(int i = 0; i < 3; i++)
+	for(int i = 0; i < f; i++)
 	{
 		printf("\n%s\t%s\t%.1f\n",player[i].playerName, player[i].teamName, player[i].battingAvg);
 	}
