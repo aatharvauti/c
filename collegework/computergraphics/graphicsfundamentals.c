@@ -1,7 +1,7 @@
 #include<stdio.h>
 // #include<conio.h> conio not installed in my WSL
 #include<graphics.h>
-// #include<dos.h> not supported
+// #include<dos.h>
 #include<math.h>
 #include<stdlib.h>
 
@@ -13,6 +13,18 @@ void rotation();
 void scaling();
 void shearing();
 void reflection();
+
+void wait_for_char()
+{
+
+    //Wait for a key press
+    int in = 0;
+
+    while (in == 0) {
+        in = getchar();
+    }
+}
+
 
 int a[10][2],i,x,option,temp,angle,tx,ty,fx,fy,sh,k,n,axis,y;
 float sx,sy;
@@ -84,7 +96,7 @@ void translation()
 {
 	output();
 
-	printf("enter the tranformation vertex tx,ty:\n");
+	printf("Enter the transformation vertex tx,ty:\n");
 	scanf("%d%d", &tx, &ty);
 	for(int i = 0; i <= n; i++) {
 		a[i][0]=a[i][0]+tx;
@@ -183,5 +195,7 @@ void main()
 	initgraph(&gd, &gm, (char*)"");
 	// initgraph(&gd,&gm,"c:\\tc\\bgi"); Windows
 	menu();
-	delay(150000);
+	wait_for_char();
+	
+	//delay(150000);
 } 
