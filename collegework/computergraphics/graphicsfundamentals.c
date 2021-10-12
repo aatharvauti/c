@@ -183,4 +183,5 @@ void main()
 	initgraph(&gd, &gm, (char*)"");
 	// initgraph(&gd,&gm,"c:\\tc\\bgi"); Windows
 	menu();
+	delay(150000);
 } 
