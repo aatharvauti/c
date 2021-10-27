@@ -12,20 +12,24 @@ void translate();
 int main() 
 {
 
-    printf("Enter number of sides");
+    printf("Enter number of sides:\n");
     scanf("%d",&n);
 
-    printf("Enter coordinates");
+    printf("Enter coordinates:\n");
 
     for (int i = 0; i < n; i++)
         scanf("%d%d",&xs[i],&ys[i]);
     
-    printf("Enter distances");
+    printf("Enter distances:\n");
     scanf("%d%d",&tx,&ty);
 
     initgraph(&gd, &gm, (char*)"");
     cleardevice();
     setcolor(RED);
+    draw();
+
+    setcolor(BLUE);
+    translate();
     draw();
 
     delay(60000);
