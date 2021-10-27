@@ -37,5 +37,9 @@ void boundaryfill(int x, int y, int boundary, int fill)
         boundaryfill(x-1,y,boundary,fill);
         boundaryfill(x,y+1,boundary,fill);
         boundaryfill(x,y-1,boundary,fill);
+        boundaryfill(x+1,y+1,boundary,fill);
+        boundaryfill(x-1,y-1,boundary,fill);
+        boundaryfill(x+1,y-1,boundary,fill);
+        boundaryfill(x-1,y+1,boundary,fill);
     }
 }
