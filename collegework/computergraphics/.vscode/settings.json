@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "random": "c",
-        "2d-scaling": "c"
+        "2d-scaling": "c",
+        "graphics.h": "c"
     }
 }
