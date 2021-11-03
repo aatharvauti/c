@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<graphics.h>
 
-void boundaryfill(int x, int y, int boundary, int fill);
+void flood(int x, int y, int boundary, int fill);
 
 int main()
 {
@@ -18,28 +18,22 @@ int main()
     cleardevice();
     setcolor(WHITE);
     rectangle(x1,y1,x2,y2);
-    boundaryfill(x1+1,y1+1,15,4);
+    flood(x1+1,y1+1,15,4);
 
     delay(60000);
     return 0;
 }
 
-void boundaryfill(int x, int y, int boundary, int fill)
+void flood(int x, int y, int old, int new)
 {
-    int current;
-    current = getpixel(x,y);
-
-    if(current != boundary && current != fill)
+    if (getpixel(x, y) == old)
     {
-        putpixel(x,y,fill);
+        putpixel(x,y,new);
         delay(10);
-        boundaryfill(x+1,y,boundary,fill);
-        boundaryfill(x-1,y,boundary,fill);
-        boundaryfill(x,y+1,boundary,fill);
-        boundaryfill(x,y-1,boundary,fill);
-        boundaryfill(x+1,y+1,boundary,fill);
-        boundaryfill(x-1,y-1,boundary,fill);
-        boundaryfill(x+1,y-1,boundary,fill);
-        boundaryfill(x-1,y+1,boundary,fill);
+        //bottom, top, right, left
+        flood(x + 1, y, new, old);
+        flood(x - 1, y, new, old);
+        flood(x, y + 1, new, old);
+        flood(x, y - 1, new, old);
     }
 }
