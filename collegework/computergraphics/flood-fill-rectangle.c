@@ -18,7 +18,7 @@ int main()
     cleardevice();
     setcolor(WHITE);
     rectangle(x1,y1,x2,y2);
-    flood(x1+1,y1+1,15,4);
+    flood(x1+1,y1+1,2,0);
 
     delay(60000);
     return 0;
@@ -28,8 +28,8 @@ void flood(int x, int y, int old, int new)
 {
     if (getpixel(x, y) == old)
     {
-        putpixel(x,y,new);
         delay(10);
+        putpixel(x,y,new);
         //bottom, top, right, left
         flood(x + 1, y, new, old);
         flood(x - 1, y, new, old);
