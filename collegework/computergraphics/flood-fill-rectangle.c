@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<graphics.h>
 
-void flood(int x, int y, int boundary, int fill);
+void flood(int x, int y, int new, int old);
 
 int main()
 {
