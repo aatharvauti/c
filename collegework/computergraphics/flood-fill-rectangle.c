@@ -24,7 +24,7 @@ int main()
     return 0;
 }
 
-void flood(int x, int y, int old, int new)
+void flood(int x, int y, int new, int old)
 {
     if (getpixel(x, y) == old)
     {
