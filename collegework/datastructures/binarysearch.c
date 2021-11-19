@@ -14,7 +14,10 @@ int binarysearch(int a[], int lower_bound, int upper_bound, int val)
 
         if(a[mid] == val) {
             pos = mid;
-            printf("Element found at position: %d\n", pos + 1);
+            printf("Element found at position: %d\n", pos + 1); 
+            // pos returns index, 
+            // pos + 1 returns the position (starting from 1)
+            
             return 0;
         }
         else if(a[mid] > val)
