@@ -3,6 +3,7 @@
         "random": "c",
         "2d-scaling": "c",
         "graphics.h": "c",
-        "array": "c"
+        "array": "c",
+        "stdio.h": "c"
     }
 }
