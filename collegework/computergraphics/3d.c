@@ -14,45 +14,6 @@ void axis()
       line(0,midy,maxx,midy);
 }
 
-int main()
-{
-      int ch;
-
-      printf("\n1.Translation\n2.Scaling\n3.Rotation\n4.Exit");
-      printf("\nEnter your choice:");
-      scanf("%d",&ch);
-
-      do
-      {
-            switch(ch)
-            {
-                  case 1 :             
-                        trans();
-                        break;
-
-                  case 2 :             
-                        scale();
-                        break;
-
-                  case 3 :             
-                        rotate();
-                        break;
-
-                  case 4 :
-                        return 0;        
-                        break;
-            }
-
-      } while(ch<4);
-      
-      delay(60000);
-      closegraph();
-
-      return 0;
-}
-
-
-
 void scale()
 {
       int x,y,z,o,x1,x2,y1,y2;
