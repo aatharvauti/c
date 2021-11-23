@@ -7,7 +7,6 @@ int x, y, xa, ya, xb, yb, maxx, maxy, midx, midy;
 
 void transform()
 {
-		
 	detectgraph(&gd,&gm);
 	initgraph(&gd,&gm,(char*)"");
 
@@ -16,11 +15,6 @@ void transform()
 
 	midx = maxx/2;
 	midy = maxy/2;
-
-	// int xa = 100;
-	// int ya = 50;
-	// int xb = 150;
-	// int yb = 0;
 
 	bar3d(midx + xa, midy - ya, midx + xb, midy - yb, 30, 1);
 	bar3d(midx + x + xa, midy - (y + ya), midx + x + xb, midy - (y + yb), 30, 1);
@@ -31,6 +25,7 @@ int main()
 {
 
 	printf("\nEnter Dimensions (xa, ya, xb, yb): ");
+	// Sample Values: 100, 50, 150, 0
 	scanf("%d%d%d%d", &xa, &ya, &xb, &yb);
 
 	printf("\nEnter Translation Factor: ");
