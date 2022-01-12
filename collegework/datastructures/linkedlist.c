@@ -78,17 +78,17 @@ struct node *create_ll(struct node *start)
         new_node -> data=num;
         if(start==NULL)
         {
-        new_node -> next = NULL;
-        start = new_node;
+            new_node -> next = NULL;
+            start = new_node;
         }
         else
         {
-        ptr=start;
+            ptr=start;
 
-        while(ptr->next!=NULL)
-        ptr=ptr->next;
-        ptr->next = new_node;
-        new_node->next=NULL;
+            while(ptr->next!=NULL)
+            ptr=ptr->next;
+            ptr->next = new_node;
+            new_node->next=NULL;
         }
         printf("\nLinked List Create: ");
         scanf("%d", &num);
