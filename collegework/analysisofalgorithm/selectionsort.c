@@ -58,9 +58,10 @@ int main()
         }
     }
 
-    printf("Sorted Array:\n");
+    printf("\n\nResult:\n");
     for(i = 0; i < len; i++)
-        printf("%d\n", list[i]);
+        printf("%d  ", list[i]);
     
+    printf("\n");
     return 0;
 }
