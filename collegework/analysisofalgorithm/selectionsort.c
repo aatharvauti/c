@@ -26,8 +26,8 @@ Algorithm to write program in C
 Step 1 − SET min to the first location
 Step 2 − SEARCH the minimum element in the array
 Step 3 – SWAP the first location with the minimum value in the array
-Step 4 – ASSIGN the second element as min.
-Step 5 − REPEAT the process until we get a sorted array.
+Step 4 – ASSIGN the second element as min
+Step 5 − REPEAT the process until we get a sorted array
 */
 
 #include <stdio.h>
@@ -48,7 +48,7 @@ int main()
         pos = i;
         for(j = i + 1; j < len; j++) {
             if(list[pos] > list[j])
-            pos = j;
+                pos = j;
         }
 
         if(pos != i) {
