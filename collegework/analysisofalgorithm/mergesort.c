@@ -8,16 +8,16 @@ tc: O(n*Log n)
 
 Algorithm to write program in C:
 
-MergeSort(arr[], l,  r)
+MergeSort(list[], l,  r)
 If r > l
 Step 1 − Find the middle point to divide the array into two halves:  
     middle m = l+ (r-l)/2
 Step 2 − Call mergeSort for first half:   
-    Call mergeSort(arr, l, m)
+    Call mergeSort(list, l, m)
 Step 3 − Call mergeSort for second half:
-    Call mergeSort(arr, m+1, r)
+    Call mergeSort(list, m+1, r)
 Step 4 − Merge the two halves sorted in step 2 and 3:
-    Call merge(arr, l, m, r)
+    Call merge(list, l, m, r)
 
 */
 
