@@ -4,7 +4,6 @@
 int main(){
 
     int pid, pid1, pid2;
-    
     pid = fork();
 
     if(pid == -1)
@@ -12,11 +11,11 @@ int main(){
 
     if(pid != 0) {
       pid1 = getpid();
-      printf("\n Parent Process ID: %d\n", pid1);
+      printf("\n\tParent Process ID:\t %d\n", pid1);
     }
     else {
       pid2 = getpid();
-      printf("\n Child Process ID: %d\n", pid2);
+      printf("\tChild Process ID:\t %d\n", pid2);
     }
 
     return 0;
