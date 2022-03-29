@@ -20,8 +20,6 @@ int main()
     int list[SIZE], KEY, i, flag, low, high;
 
     int BinarySearch(int list[SIZE], int KEY, int low, int high);
-
-    printf("\nRoll no. 01\tAtharva Auti\n");
     
     printf("\nEnter the number of elements: ");
     scanf("%d", &len);
