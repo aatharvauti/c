@@ -42,7 +42,6 @@ void maxmin(int x, int y) {
 int main()
 {
     int len;
-    printf("\nRoll no. 01\tAtharva Auti\n");
     
     printf("\nEnter the number of elements: ");
     scanf("%d", &len);
