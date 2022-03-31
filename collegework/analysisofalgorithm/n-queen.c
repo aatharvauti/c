@@ -57,8 +57,6 @@ int main()
 {
     int i, n;
     
-    printf("\nRoll no. 01\tAtharva Auti\n");
-    
     printf("Enter the number of Queens: ");
     scanf("%d", &n);
     
