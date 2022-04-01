@@ -13,7 +13,6 @@ void cal();
 
 int main()
 {
-    printf("\nRoll no. 01\tAtharva Auti\n");
 
     int i, j;
 
